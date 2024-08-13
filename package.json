@@ -1,8 +1,8 @@
 {
-  "name": "vite-react-router-template",
+  "name": "PongBlocks",
   "private": true,
   "version": "0.0.0",
-  "type": "module","homepage": "vite-react-router-template",
+  "type": "module","homepage": "PongBlocks",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
