@@ -1,26 +1,69 @@
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
-:root{
-  --hue:200;
+
+:root {
+  --hue: 200;
   --saturation: 50%;
-  --foregroundColor:hsl( var(--hue), var(--saturation), 75%);
-  --backgroundColor:hsl( var(--hue), var(--saturation), 10%);
+  --foregroundColor: hsl(var(--hue), var(--saturation), 75%);
+  --backgroundColor: hsl(var(--hue), var(--saturation), 10%);
 
 }
-html, body{
+
+html,
+body {
   overflow: none;
   position: fixed;
 }
+
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   background-color: var(--backgroundColor);
   overflow: hidden;
-  @media(max-width:768px){
-      writing-mode: vertical-lr;
-      overflow: none;
-      
+
+  @media(max-width:768px) {
+    writing-mode: vertical-lr;
+    overflow: none;
+
+  }
+}
+
+.paddle {
+  width: 10vh;
+  height: 1vh;
+  background-color: var(--foregroundColor);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5vh;
+  border-radius: 0.5vh;
+}
+
+.ball {
+  width: 2.5vh;
+  height: 2.5vh;
+  position: absolute;
+  background-color: var(--foregroundColor);
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.blockWrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: absolute;
+  .block {
+    width: 100px;
+    height: 2vh;
+    background-color: var(--foregroundColor);
+    border-radius: 3px;
   }
 }
